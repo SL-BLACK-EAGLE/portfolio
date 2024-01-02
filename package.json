@@ -10,6 +10,7 @@
     "prettier": "prettier --write ."
   },
   "dependencies": {
+    "@lottiefiles/react-lottie-player": "latest",
     "@nextui-org/react": "^2.2.8",
     "@studio-freight/lenis": "^1.0.33",
     "framer-motion": "^10.16.4",
