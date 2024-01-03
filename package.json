@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "@lottiefiles/react-lottie-player": "latest",
-    "@nextui-org/react": "^2.2.8",
+    "@nextui-org/react": "^2.2.9",
     "@studio-freight/lenis": "^1.0.33",
-    "framer-motion": "^10.16.4",
+    "framer-motion": "^10.17.0",
     "gsap": "^3.12.4",
     "next": "14.0.1",
     "next-themes": "^0.2.1",
