@@ -92,29 +92,29 @@ const BigNavButton: React.FC<BigNavButtonProps> = ({
                 style={{ transform: `translateX(${translateX})` }}
                 className="group flex  h-full cursor-pointer items-center whitespace-nowrap"
               >
-                <h2 className="text-6xl">{name} &nbsp;</h2>
+                <h2 className="text-5xl">{name} &nbsp;</h2>
                 <p className="absolute -right-5 top-0">{number}</p>
               </div>
             )}
             {/*hover only*/}
             {isHovered && (
               <div className="group flex font-serif flex-row  h-full cursor-pointer items-center whitespace-nowrap">
-                <h2 className="text-6xl group-hover:animate-loopL">
+                <h2 className="text-5xl group-hover:animate-loopL">
                   {name} &nbsp;
                 </h2>
-                <h2 className="text-6xl group-hover:animate-loopL">
+                <h2 className="text-5xl group-hover:animate-loopL">
                   {name} &nbsp;
                 </h2>
-                <h2 className="text-6xl group-hover:animate-loopL">
+                <h2 className="text-5xl group-hover:animate-loopL">
                   {name} &nbsp;
                 </h2>
-                <h2 className="text-6xl group-hover:animate-loopL">
+                <h2 className="text-5xl group-hover:animate-loopL">
                   {name} &nbsp;
                 </h2>
-                <h2 className="text-6xl group-hover:animate-loopL">
+                <h2 className="text-5xl group-hover:animate-loopL">
                   {name} &nbsp;
                 </h2>
-                <h2 className="text-6xl group-hover:animate-loopL">
+                <h2 className="text-5xl group-hover:animate-loopL">
                   {name} &nbsp;
                 </h2>
               </div>

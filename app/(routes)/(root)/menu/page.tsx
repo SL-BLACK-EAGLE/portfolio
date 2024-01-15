@@ -21,8 +21,10 @@ const NavButtonsPage = () => {
                   : 0 || index === 1
                     ? 30
                     : 0 || index === 3
-                      ? 30
-                      : 0
+                      ? 50
+                      : 0 || index === 5
+                        ? 30
+                        : 0
           }%`}
         />
       ))}
