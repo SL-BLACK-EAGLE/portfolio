@@ -50,11 +50,13 @@ export const HomeHero = () => {
   }, []);
 
   useEffect(() => {
+    const currentRef = playerWrapperRef.current;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            gsap.to(playerWrapperRef.current, {
+            gsap.to(currentRef, {
               autoAlpha: 1,
               duration: 1,
               onComplete: () => playerRef.current?.play(),
@@ -67,13 +69,13 @@ export const HomeHero = () => {
       },
     );
 
-    if (playerWrapperRef.current) {
-      observer.observe(playerWrapperRef.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (playerWrapperRef.current) {
-        observer.unobserve(playerWrapperRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
