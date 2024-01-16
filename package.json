@@ -7,11 +7,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "slicemachine": "start-slicemachine"
   },
   "dependencies": {
     "@lottiefiles/react-lottie-player": "latest",
     "@nextui-org/react": "^2.2.9",
+    "@prismicio/client": "^7.3.1",
+    "@prismicio/next": "^1.5.0",
+    "@prismicio/react": "^2.7.3",
     "@studio-freight/lenis": "^1.0.33",
     "framer-motion": "^10.17.0",
     "gsap": "^3.12.4",
@@ -22,6 +26,7 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@slicemachine/adapter-next": "^0.3.32",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -33,6 +38,7 @@
     "eslint-plugin-react": "^7.33.2",
     "postcss": "^8",
     "prettier": "^3.1.1",
+    "slice-machine-ui": "^1.22.2",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
   }
