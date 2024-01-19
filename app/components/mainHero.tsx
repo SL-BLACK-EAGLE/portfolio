@@ -10,7 +10,7 @@ import likeCrazyLottie from "../../lottie/like-cray.json";
 gsap.registerPlugin(CustomEase);
 CustomEase.create("cubic-text", "0.25, 1, 0.5, 1");
 
-export const HomeHero = () => {
+export const MainHero = () => {
   const heroInfiniteRef = useRef(null);
   const likeCrazyLottieRef = useRef<Player>(null);
   const playerWrapperRef = useRef<HTMLDivElement>(null);
