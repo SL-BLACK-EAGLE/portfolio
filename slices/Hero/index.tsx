@@ -5,6 +5,7 @@ import { SliceComponentProps } from "@prismicio/react";
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Bounded from "@/app/components/Bounded";
+import Shapes from "@/slices/Hero/Shapes";
 
 /**
  * Props for `Hero`.
@@ -63,7 +64,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         ease: "elastic.out(1,0.1)",
         duration: 2.5,
         delay: 0.6,
-        x: 25,
+        x: 30,
         y: 10,
         color: "#fbbf24",
       });
@@ -88,10 +89,11 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
       data-slice-variation={slice.variation}
       ref={component}
     >
-      <div className="grid min-h-[70vh] grid-cols-1 md:grid-cols-2 items-center">
+      <div className="grid min-h-[70vh] grid-cols-1 md:grid-cols-2 items-center justify-center">
+        <Shapes />
         <div className="col-start-1 md:row-start-1">
           <h1
-            className="mb-8 text-[clamp(3rem,22vmin,8rem)] md:text-[clamp(2rem,20vmin,3.5rem)] lg:text-[clamp(3rem,20vmin,5rem)] xl:text-[clamp(3rem,20vmin,8rem)] font-extrabold leading-none tracking-tighter"
+            className="mb-8 text-[clamp(4rem,28vmin,9rem)] md:text-[clamp(3rem,20vmin,6.5rem)] lg:text-[clamp(3rem,20vmin,5rem)] xl:text-[clamp(3rem,20vmin,8rem)] font-extrabold leading-none tracking-tighter"
             aria-label={
               slice.primary.first_name + " " + slice.primary.last_name
             }
