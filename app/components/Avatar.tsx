@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ImageField } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
