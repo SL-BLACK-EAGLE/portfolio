@@ -57,11 +57,27 @@ const BigNavButton: React.FC<BigNavButtonProps> = ({
     return () => {};
   }, []);
 
+  // useEffect(() => {
+  //   // Button hover animation
+  //   gsap.to(buttonRef.current, {
+  //     duration: 1.3,
+  //     ease: "power4.inOut",
+  //     scrollTrigger: {
+  //       trigger: buttonRef.current,
+  //       start: "top center",
+  //       end: "bottom center",
+  //       scrub: true,
+  //     },
+  //     scaleX: 1.55,
+  //     scaleY: 1.55,
+  //   });
+  // }, []);
+
   useEffect(() => {
     // Button hover animation
     gsap.to(buttonRef.current, {
-      duration: 1.3,
-      ease: "power4.inOut",
+      duration: 2.3,
+      ease: "elastic.out(1, 0.3)", // Changed to elastic effect
       scrollTrigger: {
         trigger: buttonRef.current,
         start: "top center",

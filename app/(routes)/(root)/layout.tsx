@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function RootLayout({
+export default function PageLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return <main className="bg-slate-900">{children}</main>;
+  return <main className="">{children}</main>;
 }

@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 import { FlowerLogo } from "./icons";
-import gsap from "gsap";
+import { gsap } from "gsap";
 import { CustomEase } from "gsap/dist/CustomEase";
 import { Player } from "@lottiefiles/react-lottie-player";
 import likeCrazyLottie from "../../lottie/like-cray.json";
@@ -147,14 +147,16 @@ export const MainHero = () => {
           </span>
           <div
             ref={heroInfiniteRef}
-            className="font_aeonik absolute bottom-[-35vw] left-[25%] ml-10 -mr-10 h-8 w-40  overflow-hidden rounded-full border border-black text-xs font-normal uppercase opacity-0  md:left-[40%]   md:h-14  md:w-52 md:text-xl lg:relative lg:left-8 lg:bottom-3 lg:right-[1vw] lg:w-[16vw]  lg:leading-10 "
+            className="font_aeonik absolute bottom-[-35vw] left-[25%] ml-10 -mr-10 h-8 w-40
+            overflow-hidden rounded-full border border-black text-xs font-normal uppercase opacity-0
+            md:left-[40%] md:h-14 md:w-52 md:text-xl lg:relative lg:left-8 lg:bottom-3 lg:right-[1vw] lg:w-[16vw] lg:leading-10"
           >
             <div className="group flex h-full cursor-pointer items-center whitespace-nowrap">
-              <span className=" group-hover:pause animate-loopL">
-                Show Reel 2023© Show Reel 2023©&nbsp;
+              <span className="group-hover:pause animate-loopL">
+                Show Reel 2024© Show Reel 2024©&nbsp;
               </span>
               <span className=" group-hover:pause animate-loopL">
-                Show Reel 2023© Show Reel 2023©&nbsp;
+                Show Reel 2024© Show Reel 2024©&nbsp;
               </span>
             </div>
           </div>

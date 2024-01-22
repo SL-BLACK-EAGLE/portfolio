@@ -59,6 +59,11 @@ function Geometries() {
       geometry: new THREE.OctahedronGeometry(1.5), //Diamond
       r: 0.6, // Add r property
     },
+    {
+      position: [-2.6, -2.6, -1],
+      geometry: new THREE.TorusKnotGeometry(0.8, 0.3, 100, 16), //Diamond
+      r: 0.6, // Add r property
+    },
   ];
 
   const materials = [
@@ -102,10 +107,34 @@ function Geometries() {
     // new THREE.MeshStandardMaterial({ color: 0xe74c3c, roughness: 0.1 }),
   ];
 
+  const soundEffects = [
+    new Audio("/sounds/p1.ogg"),
+    new Audio("/sounds/p2.ogg"),
+    new Audio("/sounds/p3.ogg"),
+    new Audio("/sounds/p4.ogg"),
+    new Audio("/sounds/p5.ogg"),
+    new Audio("/sounds/p6.ogg"),
+    new Audio("/sounds/p7.ogg"),
+    new Audio("/sounds/p8.ogg"),
+    new Audio("/sounds/p9.ogg"),
+    new Audio("/sounds/p10.ogg"),
+    new Audio("/sounds/p11.ogg"),
+    new Audio("/sounds/p12.ogg"),
+    new Audio("/sounds/p13.ogg"),
+    new Audio("/sounds/p14.ogg"),
+    new Audio("/sounds/p15.ogg"),
+    new Audio("/sounds/p16.ogg"),
+    new Audio("/sounds/1.ogg"),
+    new Audio("/sounds/2.ogg"),
+    new Audio("/sounds/3.ogg"),
+    new Audio("/sounds/4.ogg"),
+  ];
+
   return geometries.map(({ position, r, geometry }) => (
     <Geometry
       key={JSON.stringify(position)}
       position={position.map((p) => p * 2)} // Corrected map function
+      soundEffects={soundEffects}
       geometry={geometry}
       materials={materials}
       r={r}
@@ -113,7 +142,7 @@ function Geometries() {
   ));
 }
 
-function Geometry({ r, position, geometry, materials }) {
+function Geometry({ r, position, geometry, materials, soundEffects }) {
   const meshRef = React.useRef(); // Corrected ref type
   const [visible, setVisible] = React.useState(true);
 
@@ -124,14 +153,16 @@ function Geometry({ r, position, geometry, materials }) {
   }
   function handleClick(e) {
     const mesh = e.object;
+    gsap.utils.random(soundEffects).play();
+
     gsap.to(mesh.rotation, {
       x: `+=${gsap.utils.random(0, 2)}`,
       y: `+=${gsap.utils.random(0, 2)}`,
       z: `+=${gsap.utils.random(0, 2)}`,
       duration: 1.3,
-      ease: "elastic.Out(1,0.3)",
+      ease: "elastic.out(1,0.3)",
+      yoyo: true,
     });
-
     mesh.material = getRandomMaterial();
   }
 
@@ -149,9 +180,9 @@ function Geometry({ r, position, geometry, materials }) {
         x: 0,
         y: 0,
         z: 0,
-        duration: 1,
-        ease: "elastic.Out(1,0.3)",
-        delay: 0.3,
+        duration: 2.5,
+        ease: "elastic.out(1,0.3)",
+        delay: 0.5,
       });
     });
     return () => ctx.revert();
