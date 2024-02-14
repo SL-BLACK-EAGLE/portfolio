@@ -4,6 +4,7 @@ import Bounded from "@/app/components/Bounded";
 import Heading from "@/app/components/Heading";
 import React from "react";
 import Avatar from "@/app/components/Avatar";
+import Button from "@/app/components/Button";
 
 /**
  * Props for `Biography`.
@@ -23,14 +24,13 @@ const Biography = ({ slice }: BiographyProps): JSX.Element => {
         <Heading as="h1" size="xl" className="col-start-1">
           {slice.primary.heading}
         </Heading>
-        <div className="prose prose-xl prose-slate prose-invert col-start-1">
+        <div className="prose prose-xl prose-slate prose-invert col-start-1 ">
           <PrismicRichText field={slice.primary.description} />
         </div>
-        {/*<Button*/}
-        {/*  linkField={slice.primary.button_link}*/}
-        {/*  label={slice.primary.button_text}*/}
-        {/*/>*/}
-
+        <Button
+          linkField={slice.primary.button_link}
+          label={slice.primary.button_text}
+        />
         <Avatar
           image={slice.primary.avatar}
           className="row-start-1 max-w-sm md:col-start-2 md:row-end-3"

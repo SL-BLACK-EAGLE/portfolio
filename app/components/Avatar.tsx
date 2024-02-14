@@ -7,13 +7,11 @@ import { PrismicNextImage } from "@prismicio/next";
 import clsx from "clsx";
 import usePrefersReducedMotion from "@/hooks/usePrefersReducedMotion";
 
-export default function Avatar({
-  image,
-  className,
-}: {
+type AvatarProps = {
   image: ImageField;
   className?: string;
-}) {
+};
+export default function Avatar({ image, className }: AvatarProps) {
   const component = useRef(null);
   const prefersReducedMotion = usePrefersReducedMotion();
 
