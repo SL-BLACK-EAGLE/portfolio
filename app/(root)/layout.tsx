@@ -5,5 +5,5 @@ export default function MainLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <main className="bg-slate-900 min-h-screen">{children}</main>;
+  return <main className="bg-slate-900 min-h-screen w-full">{children}</main>;
 }

@@ -1,13 +1,13 @@
 import React from "react";
 
-export default function AboutLayout({
+export default function PageLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
     <div className="justify-center flex">
-      <div className="overflow-x-hidden">{children}</div>
+      <div className="overflow-x-hidden w-full mx-auto">{children}</div>
     </div>
   );
 }
