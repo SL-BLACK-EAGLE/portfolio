@@ -9,7 +9,7 @@ export default function PageLayout({
   return (
     <main className="">
       <NewHeader />
-      <div className="mx-auto max-w-7xl">{children}</div>
+      <div className="mx-auto overflow-x-hidden">{children}</div>
     </main>
   );
 }
