@@ -11,7 +11,7 @@ import React, {
 } from "react";
 
 import Lenis from "@studio-freight/lenis";
-import debounce from "@/util/debounce";
+import debounce from "@/utils/debounce";
 
 const PageContext = createContext<Lenis | null>(null);
 

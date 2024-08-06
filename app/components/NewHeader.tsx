@@ -12,17 +12,27 @@ export default async function NewHeader() {
         <nav>
           <ul>
             <Link
-              href={"/homepage"}
+              href={"/portfolio-v1/homepage"}
               aria-label="Home Page"
               className="text-white"
             >
               {settings.data.name}
             </Link>
-            {settings.data.nav_item.map(({ link, label }, index) => (
-              <li key={index} className="text-white">
-                <PrismicNextLink field={link}>{label}</PrismicNextLink>
-              </li>
-            ))}
+            {settings.data.nav_item.map(({ link, label }, index) => {
+              // Modify the link object to include the desired path
+              const modifiedLink = {
+                ...link,
+                url: `/portfolio-v1${link.url}`,
+              };
+
+              return (
+                <li key={index} className="text-white">
+                  <PrismicNextLink field={modifiedLink}>
+                    {label}
+                  </PrismicNextLink>
+                </li>
+              );
+            })}
           </ul>
         </nav>
       </div>
