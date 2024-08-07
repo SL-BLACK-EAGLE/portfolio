@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { navItems } from "@/data";
 
 import Hero from "@/app/components/v2/Hero";

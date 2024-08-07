@@ -1,4 +1,5 @@
 import { FaLocationArrow } from "react-icons/fa6";
+import React from "react";
 
 import { socialMedia } from "@/data";
 import MagicButton from "./MagicButton";

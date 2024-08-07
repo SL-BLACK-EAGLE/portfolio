@@ -17,14 +17,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <ThemeProvider
         attribute="class"
         defaultTheme="system"
         enableSystem
         disableTransitionOnChange
       >
-        <body className={urbanist.className} suppressHydrationWarning>
+        <body className={urbanist.className}>
           <main className="w-[100vw]  min-h-screen">{children}</main>
         </body>
       </ThemeProvider>

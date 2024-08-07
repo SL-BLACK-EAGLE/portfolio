@@ -1,28 +1,3 @@
-
 {
-"parser": "@typescript-eslint/parser",
-"extends": [
-"next/core-web-vitals",
-"eslint:recommended",
-"plugin:@typescript-eslint/recommended",
-"plugin:react/recommended"
-],
-"parserOptions": {
-"ecmaVersion": 2020,
-"sourceType": "module",
-"ecmaFeatures": {
-"jsx": true
+  "extends": "next/core-web-vitals"
 }
-},
-"rules": {
-// place to specify ESLint rules - can be used to overwrite rules specified from the extended configs
-// e.g. "@typescript-eslint/explicit-function-return-type": "off",
-},
-"settings": {
-"react": {
-"version": "detect"
-}
-}
-}
-
-
